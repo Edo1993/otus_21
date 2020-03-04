@@ -39,7 +39,9 @@ ssh 192.168.255.1
 ```
 Are you sure you want to continue connecting (yes/no)? ```yes```
 
-(пароль: vagrant)
+Пароль ```vagrant```
+
+
 
 После запуска стенда из Vagrantfile на хоствой машине необходимо перейти на http://127.0.0.1:8080, где будет доступна стандартная страница nginx.
 ![Img_alt](https://github.com/Edo1993/otus_21/blob/master/201.png)
