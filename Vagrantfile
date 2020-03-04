@@ -13,7 +13,6 @@ MACHINES = {
         :box_name => "centos/6",
         :net => [
                    {ip: '192.168.253.1', adapter: 2, netmask: "255.255.255.252", virtualbox__intnet: "router-net"},
-		   # Добавляем сеть на хост
                    {ip: '192.168.11.171', adapter: 3, netmask: "255.255.255.0"},
                 ]
   },
@@ -49,8 +48,6 @@ Vagrant.configure("2") do |config|
         box.vm.box = boxconfig[:box_name]
 
         box.vm.host_name = boxname.to_s
-  
-        #box.vm.network "private_network", ip: boxconfig[:ip_addr]
 
         boxconfig[:net].each do |ipconf|
           box.vm.network "private_network", ipconf
